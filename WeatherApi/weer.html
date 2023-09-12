@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+</head>
+
+<body>
+    <button onclick="fLaadBier_axios()">balls</button>
+    <div id="weertabel">Hier komt de weer</div>
+    <script>
+        function fLaadBier_axios() {
+            let url="https://api.openweathermap.org/data/2.5/forecast?lat=52.47&lon=6.38&appid=f7d5295e9f26c003682af3464439c474"
+            
+            axios.get(url)
+                .then(function (response) {
+                    console.log("\"response\" van Axios get-request: ", response); //hele response, bekijk hem: er staat meer dan alleen de data in
+                    let json = response.data; // de eigenschap "data" van het object "response" bevat de gevraagde json
+                    //console.log("Bier, geladen met AJAX via Axios ", json);
+                    let htm = "Plaats" +  response.data.city.name + "<br>";
+                    htm += "temperatuur: " + response.data.list[0].main.temp + " Kelvin<br>"
+                    htm += "temperatuur: " + (response.data.list[0].main.temp-273) + " <sup>0</sup>C<br>"
+                    document.getElementById("weertabel").innerHTML = htm;
+                })
+        }
+    </script>
+
+</html>

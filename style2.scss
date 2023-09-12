@@ -1,0 +1,129 @@
+@font-face {
+    font-family: Satisfy;
+    src: url(fonts/Satisfy-Regular.ttf) format('truetype');
+  }
+
+  * {
+    font-family: Satisfy;
+  }
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url(foto/1920x1080-1252537-fantasy-forest.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  color: #ffffff;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.45em;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-size: 0.99em;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: 1px solid
+    linear-gradient(
+      90deg,
+      rgba(149, 0, 126, 1) 0%,
+      rgba(106, 47, 89, 1) 31%,
+      rgba(85, 85, 85, 1) 100%
+    );
+  background: rgb(149, 0, 126);
+  background: linear-gradient(
+    90deg,
+    rgba(149, 0, 126, 1) 0%,
+    rgba(106, 47, 89, 1) 31%,
+    rgba(85, 85, 85, 1) 100%
+  );
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+#sexydiv {
+	background: rgba(0, 0, 0, 0.566);
+	position: relative;
+	// height: 100px;
+    width: 300px;
+	color: #ffffff;
+	top:200px;
+	left: 700px;
+	size: 60px;
+}
+
+
+ 
+  
